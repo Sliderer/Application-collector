@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace App_collector
 {
-    internal class File
+    public class File
     {
         [JsonProperty("path")]
         internal string path { get; set; }

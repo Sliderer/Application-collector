@@ -10,7 +10,9 @@
         <Border Width="100" Height="100"
                 Background="White"
                 CornerRadius="10"
-                Margin="10">
+                Margin="10"
+                x:Name="FileBorder"
+                MouseDown="FileBorder_MouseDown">
             <TextBlock Text="{Binding FileLabel}"
                        TextWrapping="Wrap"
                        VerticalAlignment="Bottom" HorizontalAlignment="Center"/>

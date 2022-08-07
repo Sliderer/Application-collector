@@ -39,8 +39,7 @@ namespace App_collector
 
         private void AddApplicationButton_Click(object sender, RoutedEventArgs e)
         {
-            FileInfoGetter fileInfoGetter = new FileInfoGetter();
-            File file = fileInfoGetter.GetNewFile();
+            File file = FileDialogController.GetNewFile();
             FileAdder.AddFile(file);
             SavedFileController.SaveFile(file);
         }

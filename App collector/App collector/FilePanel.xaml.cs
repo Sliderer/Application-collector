@@ -33,10 +33,28 @@ namespace App_collector
             DependencyProperty.Register("FileLabel", typeof(string), typeof(FilePanel), new PropertyMetadata(""));
 
 
+
+        public File CurrentFile
+        {
+            get { return (File)GetValue(CurrentFileProperty); }
+            set { SetValue(CurrentFileProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for CurrentFile.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CurrentFileProperty =
+            DependencyProperty.Register("CurrentFile", typeof(File), typeof(FilePanel), new PropertyMetadata(null));
+
+
+
         public FilePanel()
         {
             InitializeComponent();
             DataContext = this;
+        }
+
+        private void FileBorder_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            FileDialogController.OpenFile(CurrentFile);
         }
     }
 }

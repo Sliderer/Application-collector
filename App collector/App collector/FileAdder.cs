@@ -12,6 +12,7 @@ namespace App_collector
         {
             FilePanel filePanel = new FilePanel();
             filePanel.FileLabel = file.filename + "." + file.type;
+            filePanel.CurrentFile = file;
             MainWindow.WrapPanel.Children.Add(filePanel);
         }
     }

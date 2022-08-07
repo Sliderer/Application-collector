@@ -22,7 +22,6 @@
         <Grid Grid.Row="1" Background="Gray">
             <ScrollViewer>
                 <WrapPanel x:Name="FilesWrapPanel">
-                    
                 </WrapPanel>
             </ScrollViewer>
         </Grid>

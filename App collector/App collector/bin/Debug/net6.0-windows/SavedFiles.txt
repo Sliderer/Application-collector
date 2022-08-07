@@ -1,0 +1,3 @@
+{"path":"C:\\Users\\a6271\\Downloads\\Ant_Fil.xlsx","fileName":"Ant_Fil","type":"xlsx"}
+{"path":"C:\\Users\\a6271\\Downloads\\107_27_B.txt","fileName":"107_27_B","type":"txt"}
+{"path":"C:\\Users\\a6271\\Downloads\\Токийский гуль - Tokyo Ghoul [S01-04] (2014-2018) HDTVRip 720p от Anilibria  L.torrent","fileName":"Токийский гуль - Tokyo Ghoul [S01-04] (2014-2018) HDTVRip 720p от Anilibria  L","type":"torrent"}
