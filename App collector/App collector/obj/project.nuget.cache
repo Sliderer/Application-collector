@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9IHOQ+S1bdEsxI+yPSD+UyGOC1WhFBo2H5phRnJLmSgUHJDR1zFQcpxkDN1MdWA/kxjoUyo6xzKbO0JqWYlLrA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\a6271\\source\\repos\\App collector\\App collector\\App collector.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\a6271\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

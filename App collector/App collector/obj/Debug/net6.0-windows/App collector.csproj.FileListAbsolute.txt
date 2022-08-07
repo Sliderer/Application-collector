@@ -1,0 +1,25 @@
+C:\Users\a6271\source\repos\App collector\App collector\bin\Debug\net6.0-windows\App collector.exe
+C:\Users\a6271\source\repos\App collector\App collector\bin\Debug\net6.0-windows\App collector.deps.json
+C:\Users\a6271\source\repos\App collector\App collector\bin\Debug\net6.0-windows\App collector.runtimeconfig.json
+C:\Users\a6271\source\repos\App collector\App collector\bin\Debug\net6.0-windows\App collector.dll
+C:\Users\a6271\source\repos\App collector\App collector\bin\Debug\net6.0-windows\App collector.pdb
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App collector.csproj.AssemblyReference.cache
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App collector_MarkupCompile.cache
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App collector_MarkupCompile.lref
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App collector.g.resources
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App collector.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App collector.AssemblyInfoInputs.cache
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App collector.AssemblyInfo.cs
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App collector.csproj.CoreCompileInputs.cache
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App collector.dll
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\refint\App collector.dll
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App collector.pdb
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App collector.genruntimeconfig.cache
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\ref\App collector.dll
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\FilePanel.g.cs
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\FilePanel.baml
+C:\Users\a6271\source\repos\App collector\App collector\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\a6271\source\repos\App collector\App collector\obj\Debug\net6.0-windows\App collector.csproj.CopyComplete
