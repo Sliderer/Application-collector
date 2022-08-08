@@ -21,8 +21,14 @@ namespace App_collector
 
             filePanel.FillPanel(file);
 
-            MainWindow.WrapPanel.Children.Add(filePanel);
+            FilePanelsContainer.AddFilePanel(filePanel);
+            AddPanel(filePanel);
             return true;
+        }
+
+        internal static void AddPanel(FilePanel filePanel)
+        {
+            MainWindow.WrapPanel.Children.Add(filePanel);
         }
 
         private static bool Check(File file)

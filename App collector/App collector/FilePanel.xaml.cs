@@ -29,13 +29,14 @@ namespace App_collector
         private double bigWidth = 200;
         private double startWidth = 0;
         private double enableAnimationWidth = 300;
-        private TimeSpan animationDuration = TimeSpan.FromMilliseconds(500);
+        private TimeSpan animationDuration = TimeSpan.FromMilliseconds(300);
         private bool isAnimationPlaying = false;
+
         private DoubleAnimation nextAnimation;
-
-
         private DoubleAnimation MouseEnterAnimation;
         private DoubleAnimation MouseLeaveAnimation;
+
+        private string fileType;
 
         public string FileLabel
         {
@@ -74,6 +75,7 @@ namespace App_collector
 
         internal void FillPanel(File file)
         {
+            fileType = file.type;
             FillTextInFilePanel(file);
             AddImageInFilePanel(file);
             InitAnimations();
@@ -159,6 +161,14 @@ namespace App_collector
             {
                 PlayAnimation(nextAnimation);
                 nextAnimation = null;
+            }
+        }
+
+        public string FileType
+        {
+            get
+            {
+                return fileType;
             }
         }
     }

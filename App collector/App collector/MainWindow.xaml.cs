@@ -30,6 +30,7 @@ namespace App_collector
             InitializeComponent();
             instance = this;
             LoadSavedFiles();
+            LoadSavedTypes();
         }
 
         private void LoadSavedFiles()
@@ -37,13 +38,23 @@ namespace App_collector
             SavedFilesLoader.LoadSavedFiles();
         }
 
+        private void LoadSavedTypes()
+        {
+            TypesComboBoxController.LoadTypes();
+        }
+
         private void AddApplicationButton_Click(object sender, RoutedEventArgs e)
         {
             File file = FileDialogController.GetNewFile();
             if (FileAdder.AddFile(file))
             {
-                SavedFileController.SaveFile(file);
+                SavingController.SaveFile(file);
             }
+        }
+
+        private void TypesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FilesFilter.FilterFiles((TypesComboBox.SelectedItem as TextBlock).Text);
         }
 
         public static WrapPanel WrapPanel
@@ -51,6 +62,14 @@ namespace App_collector
             get
             {
                 return instance.FilesWrapPanel;
+            }
+        }
+
+        public static ComboBox TypesComboBoxGetter
+        {
+            get
+            {
+                return instance.TypesComboBox;
             }
         }
     }
