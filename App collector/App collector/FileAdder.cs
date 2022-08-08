@@ -33,7 +33,7 @@ namespace App_collector
 
         private static bool Check(File file)
         {
-            return file.path != "";
+            return file.path != "" && System.IO.File.Exists(file.path);
         }
     }
 }

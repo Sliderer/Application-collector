@@ -29,6 +29,7 @@ namespace App_collector
         {
             InitializeComponent();
             instance = this;
+            TypesComboBox.SelectedItem = TypesComboBox.Items[0];
             LoadSavedFiles();
             LoadSavedTypes();
         }
@@ -54,7 +55,7 @@ namespace App_collector
 
         private void TypesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            FilesFilter.FilterFiles((TypesComboBox.SelectedItem as TextBlock).Text);
+            FilesViewer.FilterFiles((TypesComboBox.SelectedItem as TextBlock).Text);
         }
 
         public static WrapPanel WrapPanel

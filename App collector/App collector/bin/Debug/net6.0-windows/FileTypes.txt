@@ -2,3 +2,4 @@ pdf
 torrent
 xlsx
 zip
+txt

@@ -3,3 +3,7 @@
 {"path":"C:\\Users\\a6271\\Downloads\\Токийский гуль - Tokyo Ghoul [S01-04] (2014-2018) HDTVRip 720p от Anilibria  L.torrent","fileName":"Токийский гуль - Tokyo Ghoul [S01-04] (2014-2018) HDTVRip 720p от Anilibria  L","type":"torrent"}
 {"path":"C:\\Users\\a6271\\Downloads\\BD_SE (2).xlsx","fileName":"BD_SE (2)","type":"xlsx"}
 {"path":"C:\\Users\\a6271\\Downloads\\AUD-Win10_Win11-6.0.9285.1.zip","fileName":"AUD-Win10_Win11-6.0.9285.1","type":"zip"}
+{"path":"C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Текстовый документ.txt","fileName":"Текстовый документ","type":"txt"}
+{"path":"C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Текстовый документ.txt","fileName":"Текстовый документ","type":"txt"}
+{"path":"C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Текстовый документ.txt","fileName":"Текстовый документ","type":"txt"}
+{"path":"C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Текстовый документ.txt","fileName":"Текстовый документ","type":"txt"}

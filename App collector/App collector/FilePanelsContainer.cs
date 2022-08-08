@@ -14,5 +14,10 @@ namespace App_collector
         {
             filePanels.Add(filePanel);
         }
+
+        internal static void DeletePanel(FilePanel filePanel)
+        {
+            filePanels.Remove(filePanel);
+        }
     }
 }

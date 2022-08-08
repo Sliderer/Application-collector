@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App_collector
 {
-    internal class FilesFilter
+    internal class FilesViewer
     {
         internal static void FilterFiles(string type)
         {

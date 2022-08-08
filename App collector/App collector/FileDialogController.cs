@@ -10,6 +10,9 @@ namespace App_collector
 {
     internal class FileDialogController
     {
+        internal delegate void DeletedFile();
+        internal static event DeletedFile FileDoesNotExist;
+
         internal static File GetNewFile()
         {
             FileDialog fileDialog = new OpenFileDialog();
@@ -28,7 +31,16 @@ namespace App_collector
                 FileName = fileToOpen
             };
 
-            process.Start();
+            try
+            {
+                process.Start();
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+                FileDoesNotExist.Invoke();
+            }
+
         }
     }
 }

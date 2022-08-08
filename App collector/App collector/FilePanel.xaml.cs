@@ -70,7 +70,14 @@ namespace App_collector
 
         private void FileBorder_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            FileDialogController.FileDoesNotExist += DeleteMyself;
             FileDialogController.OpenFile(CurrentFile);
+        }
+
+        private void DeleteMyself()
+        {
+            MainWindow.WrapPanel.Children.Remove(this);
+            FilePanelsContainer.DeletePanel(this);
         }
 
         internal void FillPanel(File file)
