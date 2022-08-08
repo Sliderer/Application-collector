@@ -40,8 +40,10 @@ namespace App_collector
         private void AddApplicationButton_Click(object sender, RoutedEventArgs e)
         {
             File file = FileDialogController.GetNewFile();
-            FileAdder.AddFile(file);
-            SavedFileController.SaveFile(file);
+            if (FileAdder.AddFile(file))
+            {
+                SavedFileController.SaveFile(file);
+            }
         }
 
         public static WrapPanel WrapPanel

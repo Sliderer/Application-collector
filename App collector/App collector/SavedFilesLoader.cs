@@ -8,9 +8,9 @@ namespace App_collector
 {
     internal class SavedFilesLoader
     {
-        public static void LoadSavedFiles()
+        internal static void LoadSavedFiles()
         {
-            List<File> files = SavedFileController.GetSavedFiles();
+            List<File> files = SavedFileController.GetSavedFiles().ToList();
             foreach(File file in files)
             {
                 FileAdder.AddFile(file);

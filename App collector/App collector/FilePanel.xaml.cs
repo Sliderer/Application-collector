@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -55,6 +57,29 @@ namespace App_collector
         private void FileBorder_MouseDown(object sender, MouseButtonEventArgs e)
         {
             FileDialogController.OpenFile(CurrentFile);
+        }
+
+        internal void FillTextInFilePanel(File file)
+        {
+            FileLabel = "";
+            if (file.filename.Length + file.type.Length + 1 <= 15)
+            {
+                FileLabel = file.filename + "." + file.type;
+            }
+            else
+            {
+                FileLabel = file.filename.Substring(0, Math.Min(20, file.filename.Length)) + "..." + file.type;
+                FileBorder.Width = FileBorder.MaxWidth;
+            }
+            CurrentFile = file;
+        }
+
+        internal void AddImageInFilePanel(File file)
+        {
+            using (Icon ico = Icon.ExtractAssociatedIcon(file.path))
+            {
+                FileImage.Source = Imaging.CreateBitmapSourceFromHIcon(ico.Handle, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+            }
         }
     }
 }

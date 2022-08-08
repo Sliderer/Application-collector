@@ -1,3 +1,5 @@
-{"path":"C:\\Users\\a6271\\Downloads\\Ant_Fil.xlsx","fileName":"Ant_Fil","type":"xlsx"}
-{"path":"C:\\Users\\a6271\\Downloads\\107_27_B.txt","fileName":"107_27_B","type":"txt"}
+{"path":"C:\\Users\\a6271\\Downloads\\Токийский гуль - Tokyo Ghoul [S01-04] (2014-2018) HDTVRip 720p от Anilibria  L.torrent","fileName":"Токийский гуль - Tokyo Ghoul [S01-04] (2014-2018) HDTVRip 720p от Anilibria  L","type":"torrent"}
+{"path":"C:\\Users\\a6271\\Downloads\\15653.torrent","fileName":"15653","type":"torrent"}{"path":"C:\\Users\\a6271\\Downloads\\GDPR_agreement_under_18_self038e726507d1c433d1cc106326c6ac04.docx","fileName":"GDPR_agreement_under_18_self038e726507d1c433d1cc106326c6ac04","type":"docx"}
+{"path":"C:\\Users\\a6271\\Downloads\\Экспертное заключение.pdf","fileName":"Экспертное заключение","type":"pdf"}
+{"path":"C:\\Users\\a6271\\Downloads\\107_26 (1).txt","fileName":"107_26 (1)","type":"txt"}
 {"path":"C:\\Users\\a6271\\Downloads\\Токийский гуль - Tokyo Ghoul [S01-04] (2014-2018) HDTVRip 720p от Anilibria  L.torrent","fileName":"Токийский гуль - Tokyo Ghoul [S01-04] (2014-2018) HDTVRip 720p от Anilibria  L","type":"torrent"}

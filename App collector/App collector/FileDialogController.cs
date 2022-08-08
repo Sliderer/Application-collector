@@ -20,8 +20,8 @@ namespace App_collector
 
         internal static void OpenFile(File file)
         {
-            var fileToOpen = file.path;
-            var process = new Process();
+            string fileToOpen = file.path;
+            Process process = new Process();
             process.StartInfo = new ProcessStartInfo()
             {
                 UseShellExecute = true,

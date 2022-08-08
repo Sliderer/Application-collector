@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Text.Json;
+﻿using System.Collections.Generic;
 
 namespace App_collector
 {
@@ -16,20 +10,25 @@ namespace App_collector
             System.IO.File.AppendAllText("SavedFiles.txt", data + '\n');
         }
 
-        internal static List<File> GetSavedFiles()
+        internal static IEnumerable<File> GetSavedFiles()
         {
-            List<File> savedFiles = new List<File>();
             string[] filesJsons = System.IO.File.ReadAllLines("SavedFiles.txt");
-            for(int i =0; i < filesJsons.Length; ++i)
+            for(int i = 0; i < filesJsons.Length; ++i)
             {
-                if (filesJsons[i] == "") continue;
-                File? file = Newtonsoft.Json.JsonConvert.DeserializeObject<File>(filesJsons[i]);
+                File? file = null;
+                try
+                {
+                    file = Newtonsoft.Json.JsonConvert.DeserializeObject<File>(filesJsons[i]);
+                }
+                catch {
+                    continue;
+                }
+
                 if (file != null)
                 {
-                    savedFiles.Add(file);
+                    yield return file;
                 }
             }
-            return savedFiles;
         }
     }
 }

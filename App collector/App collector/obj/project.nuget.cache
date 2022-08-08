@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "u9kBQOJrANRA6uq1daXCJrX0+/4U+xA7NOEUwNGdSDCCB0HAzZNvCRz/MNSQffJxdOrhWn/BnyUU4AkDe99x6A==",
+  "dgSpecHash": "PSz6L0D6ffaX5/euA8Q9wpipA3DnO2H7fTqYafGSfBOxIHFqsbHa0kqlFh8tx/lQndk6+wX1bHDr73jSkmRR3A==",
   "success": true,
   "projectFilePath": "C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Repositoies\\Application-collector\\App collector\\App collector\\App collector.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\a6271\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\a6271\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\a6271\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\a6271\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
