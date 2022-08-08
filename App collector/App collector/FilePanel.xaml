@@ -13,10 +13,13 @@
                 Margin="10"
                 x:Name="FileBorder"
                 MouseDown="FileBorder_MouseDown"
+                MouseEnter="FileBorder_MouseEnter"
+                MouseLeave="FileBorder_MouseLeave"
                 MinWidth="100"
-                MaxWidth="200">
+                >
             <StackPanel>
-                <Image x:Name="FileImage" Width="50" Height="50" Margin="10"/>
+                <Image x:Name="FileImage" Width="50" Height="50" Margin="10"
+                       RenderOptions.BitmapScalingMode="HighQuality"/>
                 <TextBlock Text="{Binding FileLabel}"
                        x:Name="FileLableText"
                        VerticalAlignment="Bottom" HorizontalAlignment="Center"/>

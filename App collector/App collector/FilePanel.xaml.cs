@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,9 +12,11 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 
 namespace App_collector
 {
@@ -22,7 +25,17 @@ namespace App_collector
     /// </summary>
     public partial class FilePanel : UserControl
     {
+        private double smallWidth = 100;
+        private double bigWidth = 200;
+        private double startWidth = 0;
+        private double enableAnimationWidth = 300;
+        private TimeSpan animationDuration = TimeSpan.FromMilliseconds(500);
+        private bool isAnimationPlaying = false;
+        private DoubleAnimation nextAnimation;
 
+
+        private DoubleAnimation MouseEnterAnimation;
+        private DoubleAnimation MouseLeaveAnimation;
 
         public string FileLabel
         {
@@ -59,26 +72,93 @@ namespace App_collector
             FileDialogController.OpenFile(CurrentFile);
         }
 
-        internal void FillTextInFilePanel(File file)
+        internal void FillPanel(File file)
+        {
+            FillTextInFilePanel(file);
+            AddImageInFilePanel(file);
+            InitAnimations();
+        }
+
+        private void FillTextInFilePanel(File file)
         {
             FileLabel = "";
             if (file.filename.Length + file.type.Length + 1 <= 15)
             {
                 FileLabel = file.filename + "." + file.type;
+                ChangeBorderWidth(smallWidth);
+                startWidth = smallWidth;
             }
             else
             {
                 FileLabel = file.filename.Substring(0, Math.Min(20, file.filename.Length)) + "..." + file.type;
-                FileBorder.Width = FileBorder.MaxWidth;
+                ChangeBorderWidth(bigWidth);
+                startWidth = bigWidth;
             }
             CurrentFile = file;
         }
-
-        internal void AddImageInFilePanel(File file)
+        private void AddImageInFilePanel(File file)
         {
-            using (Icon ico = Icon.ExtractAssociatedIcon(file.path))
+            using (Icon icon = Icon.ExtractAssociatedIcon(file.path))
             {
-                FileImage.Source = Imaging.CreateBitmapSourceFromHIcon(ico.Handle, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+                FileImage.Source = Imaging.CreateBitmapSourceFromHIcon(icon.Handle, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+            }
+        }
+
+        private void ChangeBorderWidth(double width)
+        {
+            FileBorder.Width = width;
+        }
+
+        private void InitAnimations()
+        {
+            MouseEnterAnimation = new DoubleAnimation
+            {
+                From = startWidth,
+                To = enableAnimationWidth,
+                Duration = animationDuration
+            };
+
+            MouseEnterAnimation.Completed += AnimationPlayed;
+
+            MouseLeaveAnimation = new DoubleAnimation
+            {
+                From = enableAnimationWidth,
+                To = startWidth,
+                Duration = animationDuration
+            };
+            MouseLeaveAnimation.Completed += AnimationPlayed;
+        }
+
+        private void FileBorder_MouseEnter(object sender, MouseEventArgs e)
+        {
+            PlayAnimation(MouseEnterAnimation);
+        }
+
+        private void FileBorder_MouseLeave(object sender, MouseEventArgs e)
+        {
+            PlayAnimation(MouseLeaveAnimation);
+        }
+
+        private void PlayAnimation(DoubleAnimation animation)
+        {
+            if (!isAnimationPlaying)
+            {
+                FileBorder.BeginAnimation(Border.WidthProperty, animation);
+                isAnimationPlaying = true;
+            }
+            else
+            {
+                nextAnimation = animation;
+            }
+        }
+
+        private void AnimationPlayed(object sender, EventArgs e)
+        {
+            isAnimationPlaying = false;
+            if (nextAnimation != null)
+            {
+                PlayAnimation(nextAnimation);
+                nextAnimation = null;
             }
         }
     }

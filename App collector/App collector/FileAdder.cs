@@ -10,11 +10,8 @@ namespace App_collector
 {
     internal class FileAdder
     {
-        private static FileAdder instance;
-
         internal static bool AddFile(File file)
         {
-
             if (!Check(file))
             {
                 return false;
@@ -22,8 +19,7 @@ namespace App_collector
 
             FilePanel filePanel = new FilePanel();
 
-            filePanel.FillTextInFilePanel(file);
-            filePanel.AddImageInFilePanel(file);
+            filePanel.FillPanel(file);
 
             MainWindow.WrapPanel.Children.Add(filePanel);
             return true;
