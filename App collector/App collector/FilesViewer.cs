@@ -8,13 +8,17 @@ namespace App_collector
 {
     internal class FilesViewer
     {
-        internal static void FilterFiles(string type)
+        internal static void FilterFiles(ComboBoxItem selectedItem)
         {
             WrapPanel panel = MainWindow.WrapPanel;
+            string? type = selectedItem.Content.ToString();
+
+            if (type == null) return;
+
             panel.Children.Clear();
             foreach(FilePanel filePanel in FilePanelsContainer.filePanels)
             {
-                if (filePanel.FileType == type || type == "all types")
+                if (filePanel.GetFile.type == type || type == "all types")
                 {
                     FileAdder.AddPanel(filePanel);
                 }

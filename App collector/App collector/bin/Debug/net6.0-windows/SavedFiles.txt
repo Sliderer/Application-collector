@@ -7,3 +7,4 @@
 {"path":"C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Текстовый документ.txt","fileName":"Текстовый документ","type":"txt"}
 {"path":"C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Текстовый документ.txt","fileName":"Текстовый документ","type":"txt"}
 {"path":"C:\\Users\\a6271\\OneDrive\\Рабочий стол\\Текстовый документ.txt","fileName":"Текстовый документ","type":"txt"}
+{"path":"C:\\Users\\a6271\\OneDrive\\Рабочий стол\\VisualStudioSetup.exe","fileName":"VisualStudioSetup","type":"exe"}

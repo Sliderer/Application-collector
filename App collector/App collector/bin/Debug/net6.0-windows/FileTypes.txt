@@ -3,3 +3,4 @@ torrent
 xlsx
 zip
 txt
+exe

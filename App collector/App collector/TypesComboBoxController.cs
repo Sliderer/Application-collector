@@ -13,7 +13,7 @@ namespace App_collector
             List<string> types = SavingController.GetTypes().ToList();
             foreach(string type in types)
             {
-                MainWindow.TypesComboBoxGetter.Items.Add(TypeTextBlockGenerator.GenerateTextBlock(type));
+                MainWindow.TypesComboBoxGetter.Items.Add(ComboBoxItemGenerator.GenerateTextBlock(type));
             }
         }
 
@@ -22,7 +22,7 @@ namespace App_collector
             List<string> types = SavingController.GetTypes().ToList();
             if (!types.Contains(type))
             {
-                MainWindow.TypesComboBoxGetter.Items.Add(TypeTextBlockGenerator.GenerateTextBlock(type));
+                MainWindow.TypesComboBoxGetter.Items.Add(ComboBoxItemGenerator.GenerateTextBlock(type));
                 return true;
             }
             return false;

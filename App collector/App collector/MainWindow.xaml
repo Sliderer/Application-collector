@@ -19,11 +19,13 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+
     </Window.Resources>
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -46,7 +48,7 @@
                          x:Name="TypesComboBox"
                          SelectionChanged="TypesComboBox_SelectionChanged"
                          >
-                    <TextBlock x:Name="TypeTextblock" Text="all types"/>
+                    <ComboBoxItem x:Name="TypeTextblock" Content="all types"/>
                 </ComboBox>
             </StackPanel>
  

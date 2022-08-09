@@ -36,7 +36,7 @@ namespace App_collector
         private DoubleAnimation MouseEnterAnimation;
         private DoubleAnimation MouseLeaveAnimation;
 
-        private string fileType;
+        private File file;
 
         public string FileLabel
         {
@@ -82,7 +82,7 @@ namespace App_collector
 
         internal void FillPanel(File file)
         {
-            fileType = file.type;
+            this.file = file;
             FillTextInFilePanel(file);
             AddImageInFilePanel(file);
             InitAnimations();
@@ -171,11 +171,11 @@ namespace App_collector
             }
         }
 
-        public string FileType
+        public File GetFile
         {
             get
             {
-                return fileType;
+                return file;
             }
         }
     }

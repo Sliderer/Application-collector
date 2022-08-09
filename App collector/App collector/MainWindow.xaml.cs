@@ -55,7 +55,7 @@ namespace App_collector
 
         private void TypesComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            FilesViewer.FilterFiles((TypesComboBox.SelectedItem as TextBlock).Text);
+            FilesViewer.FilterFiles((TypesComboBox.SelectedItem as ComboBoxItem));
         }
 
         public static WrapPanel WrapPanel

@@ -37,7 +37,7 @@ namespace App_collector
             }
             catch
             {
-                MessageBox.Show("Error");
+                Task.Run(() => MessageBox.Show("File does not exists or was removed in another folder"));
                 FileDoesNotExist.Invoke();
             }
 
