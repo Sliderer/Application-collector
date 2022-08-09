@@ -77,7 +77,7 @@ namespace App_collector {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/App collector;component/filepanel.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/App collector;V1.0.0.0;component/filepanel.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\FilePanel.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
